@@ -7,76 +7,13 @@
 	},
 	"item": [
 		{
-			"name": "save",
+			"name": "update",
 			"request": {
 				"method": "POST",
 				"header": [],
 				"body": {
-					"mode": "formdata",
-					"formdata": [
-						{
-							"key": "firstName",
-							"value": "",
-							"type": "text"
-						},
-						{
-							"key": "lastName",
-							"value": "",
-							"type": "text"
-						},
-						{
-							"key": "phone",
-							"value": "123455656565",
-							"type": "text"
-						},
-						{
-							"key": "email",
-							"value": "",
-							"type": "text"
-						},
-						{
-							"key": "address",
-							"value": "",
-							"type": "text"
-						},
-						{
-							"key": "notes",
-							"value": "",
-							"type": "text"
-						},
-						{
-							"key": "",
-							"value": "",
-							"type": "text",
-							"disabled": true
-						}
-					]
-				},
-				"url": {
-					"raw": "http://localhost:8093/savePhonebook",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8093",
-					"path": [
-						"savePhonebook"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "update",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "GET",
-				"header": [],
-				"body": {
 					"mode": "raw",
-					"raw": "",
+					"raw": "{\r\n    \"firstName\":\"cook\",\r\n    \"lastName\":\"\",\r\n    \"phone\":\"99999\",\r\n    \"email\":\"\",\r\n    \"address\":\"\",\r\n    \"notes\":\"\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -84,15 +21,24 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8093/showFormForUpdate/1",
+					"raw": "http://localhost:8093/api/v1/updatePhonebook/9",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8093",
 					"path": [
-						"showFormForUpdate",
-						"1"
+						"api",
+						"v1",
+						"updatePhonebook",
+						"9"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "9",
+							"disabled": true
+						}
 					]
 				}
 			},
@@ -100,11 +46,8 @@
 		},
 		{
 			"name": "delete",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
 			"request": {
-				"method": "GET",
+				"method": "DELETE",
 				"header": [],
 				"body": {
 					"mode": "raw",
@@ -116,15 +59,68 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8093/deletePhonebook/1",
+					"raw": "http://localhost:8093/api/v1/deletePhonebook/9",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8093",
 					"path": [
+						"api",
+						"v1",
 						"deletePhonebook",
-						"1"
+						"9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all phonebook",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8093/api/v1/getPhonebookList",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8093",
+					"path": [
+						"api",
+						"v1",
+						"getPhonebookList"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create phonebook",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\":\"fauzi\",\r\n    \"lastName\":\"helmi\",\r\n    \"phone\":\"0998099\",\r\n    \"email\":\"fauzihelmi@gmail.com\",\r\n    \"address\":\"jaksel\",\r\n    \"notes\":\"testing\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8093/api/v1/newPhonebook",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8093",
+					"path": [
+						"api",
+						"v1",
+						"newPhonebook"
 					]
 				}
 			},
