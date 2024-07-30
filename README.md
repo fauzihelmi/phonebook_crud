@@ -1,10 +1,9 @@
 # phonebook_crud
 
 
-This project uses thymeleaf so that for testing it can be directly used on the website when the spring boot service has been run.
-Why use thymeleaf to make it easier to run front-end applications.
-
-
+1. This project uses thymeleaf so that for testing it can be directly used on the website when the spring boot service has been run.
+2. Why use thymeleaf to make it easier to run front-end applications.
+3. If you want to use Postman for testing please import collection
 
 
 -- Table: public.phonebook
