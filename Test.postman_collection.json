@@ -1,0 +1,134 @@
+{
+	"info": {
+		"_postman_id": "525f0624-12fd-4131-a9cb-e349ed93c90b",
+		"name": "Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8305364"
+	},
+	"item": [
+		{
+			"name": "save",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "firstName",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "lastName",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "123455656565",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "address",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "notes",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8093/savePhonebook",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8093",
+					"path": [
+						"savePhonebook"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8093/showFormForUpdate/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8093",
+					"path": [
+						"showFormForUpdate",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8093/deletePhonebook/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8093",
+					"path": [
+						"deletePhonebook",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
